@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+html,body{
+    height: 100%;
+    background-color: #e5e5e5ec;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.flex-container{
+    display: flex;
+}
+#personal-page-container{
+    background-color: antiquewhite;
+    height: ;
+}

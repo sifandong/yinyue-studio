@@ -1,0 +1,13 @@
+{{extend './layout.art'}}
+
+{{block 'stylesheet'}}
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/myaccount.css"> 
+{{/block}}
+
+{{block 'content'}}
+{{include './nav.art'}}
+<div class="myaccount-image">
+    <video src="{{article.video}}" alt="" autoplay muted controls>
+</div>
+{{/block}}

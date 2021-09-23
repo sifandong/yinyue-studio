@@ -1,0 +1,30 @@
+{{extend './layout.art'}}
+
+{{block 'stylesheet'}}
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/article.css">
+{{/block}}
+
+{{block 'content'}}
+{{include './nav.art'}}
+<div class="article-container">
+    <div class="article-detail-item">
+        <h3>{{article.title}}</h3>
+    </div>
+    <div class="article-detail-item flex-container" id="article-detail-detail">
+        <div>作者:{{user.username}}</div>
+        <div>发布时间:{{dateFormat(article.publishDate,'yyyy-mm-dd')}}</div>
+        
+    </div>
+    {{if article.cover}}
+    <div class="article-detail-item"><img src="{{article.cover}}" id="article-detail-cover"
+            onerror="this.src='/uploads/dog.jpg'"></div>
+
+    {{else}}
+    <div>没有找到图片哦</div>
+    {{/if}}
+    <div class="article-detail-item"><video src="{{article.video}}" controls></div>
+    <div class="article-detail-item">{{article.content}}</div>
+</div>
+
+{{/block}}

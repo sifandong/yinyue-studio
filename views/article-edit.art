@@ -1,0 +1,44 @@
+{{extend './layout.art'}}
+
+{{block 'stylesheet'}}
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/article.css"> 
+{{/block}}
+
+{{block 'content'}}
+{{include './nav.art'}}
+<div class="article-edit-container">
+    <div class="article-edit-form-box">
+        <form class="article-edit-form flex-container" action="/article/edit" method="post" enctype="multipart/form-data">
+            <div class="form-item article-edit-title">
+                <input type="text" placeholder="请输入文章标题" name="title">
+            </div>
+            <div class="form-item article-edit-author">
+                <input type="text" name="author" readonly value="{{@user._id}}">
+            </div>
+            <div class="form-item article-edit-date">
+                <input type="date" name="publishDate">
+            </div>
+            <div class="form-item article-edit-cover">
+                <input type="text" name="cover_name" placeholder="请为你的封面图片命名">
+                <input type="file" name="cover">
+                
+            </div>
+            <div class="form-item article-edit-cover">
+                <input type="text" name="video_name" placeholder="请为你的视频命名">
+                <input type="file" name="video" >
+                
+            </div>
+            <div class="form-item article-edit-content">
+                <textarea name="content" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-item article-edit-cover">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{{/block}}
+

@@ -1,0 +1,58 @@
+{{extend './layout.art'}}
+
+{{block 'stylesheet'}}
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/myaccount.css">
+{{/block}}
+
+{{block 'content'}}
+{{include './nav.art'}}
+<div class="myaccount-box flex-container">
+    <div class="myaccount-profile flex-container">
+        <div class="myaccount-profile-item flex-container" id="myaccount-icon">
+            <div><img src="/avatar/avatar.jpg" alt=""></div>
+        </div>
+        <div class="myaccount-profile-item flex-container" id="myaccount-username">
+            <div>用户名:{{user.username}}</div>
+        </div>
+        <div class="myaccount-profile-item flex-container" id="myaccount-views">
+            <div>文章访客：</div>
+        </div>
+        <div class="myaccount-profile-item flex-container" id="myaccount-likes">
+            <div>点赞：</div>
+        </div>
+    </div>
+    <div class="myaccount-portfolio flex-container">
+        <div class="myaccount-portfolio-item" id="myaccount-article">
+            <h4>我的文章</h4>
+            <ul>
+                {{each collection}}
+                <li><a href="/myaccount/article?id={{$value._id}}">{{$value.title}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="myaccount-portfolio-item" id="myaccount-video">
+            <h4>我的视频</h4>
+            <ul>
+                {{each collection}}
+                <li><a href="/myaccount/video?id={{$value._id}}">{{$value.video_name}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="myaccount-portfolio-item" id="myaccount-image">
+            <h4>我的图片</h4>
+            <ul>
+                {{each collection}}
+                <li><a href="/myaccount/image?id={{$value._id}}">{{$value.cover_name}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="myaccount-appointment flex-container">
+        <div>您最近的预约：</div>
+    </div>
+</div>
+{{/block}}
+
+{{block 'script'}}
+{{/block}}

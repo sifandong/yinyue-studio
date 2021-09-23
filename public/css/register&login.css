@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "SimHei,Microsoft Yahei";
+}
+html,body{
+    height: 100%;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.login-container{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.login-box{
+    height: 64%;
+    width: 24%;
+    background: rgba(0, 0, 0, 0.1); 
+    /* background-image: linear-gradient( 135deg, #FFF886 10%, #F072B6 100%); */
+    flex-direction: column;
+    box-shadow:gray 0px 0px 8px;
+    backdrop-filter: blur(24px);
+}
+#login-title{
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+}
+#login-form{
+    flex: 4;
+    /* background-color: rosybrown; */
+}
+#login-to-register{
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+form{
+    flex-direction: column;
+    width: 100%;
+}
+.login-form-item{
+    flex:1;
+    
+    justify-content: center;
+    align-items: center;
+}
+.login-form-item input{
+    height: 50%;
+    width: 80%;
+    border: 1.2px solid black;
+}
+.login-form-item button{
+    width: 60%;
+    height: 60%;
+    border-radius: 20px;
+    background-color: black;
+    border: none;
+    color: white;
+    /* font-size: ; */
+}
+#login-to-register a{
+    text-decoration: none;
+    color: black;
+    padding: 1.2rem;
+    font-size: 0.8rem;
+}
+#login-btn{
+    align-items: center;
+}
+#error-box{
+    flex: 0.3;
+}

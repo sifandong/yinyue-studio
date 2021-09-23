@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <title>音悦Studio</title>
+</head>
+
+<body>
+  <div class="banner">
+    <video autoplay loop muted id="bgvid">
+      <source src="/images/bg.mp4" type="video/mp4">
+    </video>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="home-navbar" style="background: rgba(0, 0, 0, 0.1) !important; 
+    backdrop-filter: blur(24px);">
+      <div class="container">
+        <a class="navbar-brand" href="home">音悦Studio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" id="nav-toggler"></span>
+        </button>
+        <div class="collapse navbar-collapse home-navbar-right" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/home">首页</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/appointment">预约</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="/piano">子昊钢琴</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/article">文章</a>
+            </li>
+
+            <!-- 这个地方需要使用模板引擎进行判定 -->
+            {{if !user}}
+            <li class="nav-item">
+              <a class="nav-link" href="/login">登录</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/register">注册</a>
+            </li>
+            {{else if user}}
+            <li class="nav-item">
+              <a class="nav-link" href="/myaccount?user_id={{user._id}}">你好，{{user.username}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">退出</a>
+            </li>
+            {{/if}}
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="banner-content">
+      <div class="banner-title">实现你的音乐梦想</div>
+      <div class="banner-btn" onclick="location.href='#home-content'">点击了解</div>
+    </div>
+    <!-- <div><audio src="/music/bgm.mp3" type="audio/mpeg" autoplay="autoplay" controls="controls" autostart = "true" ></audio></div> -->
+  </div>
+  <div class="content flex-container" id="home-content">
+    <div class="home-content-box ">
+      <h4>关于我们</h4>
+      <p>音悦艺术培训中心是一所专业钢琴艺术培训机构，针对幼儿、青少年开设钢琴和电子琴艺术培训。
+        培训过程中教师因材施教，循序渐进地提高学生音乐艺术的表现表演能力，丰富课余生活，提高艺术情操.
+      </p>
+      <h4>教学用琴</h4>
+      <img src="/images/piano1.jpg" alt="">
+      <img src="/images/piano4.jpg" alt="">
+      <img src="/images/piano2.jpg" alt="">
+      <img src="/images/piano3.jpg" alt="">
+      <h4 id="home-h4">优惠方案</h4>
+      <p>本培训中心对暂时不想购买钢琴的学员提供练琴服务（2个月）</p>
+      <p>对在本培训中心购买钢琴的学员提供保修服务，详情请电话咨询</p>
+      <div class="stuff"></div>
+    </div>
+  </div>
+  <div class="home-footer">
+    <p>designed & coded by Sifan</p>
+    <p>地址：芜湖市湾沚区环城南路苗茵园40号</p>
+  </div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>

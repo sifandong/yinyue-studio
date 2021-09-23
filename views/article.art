@@ -1,0 +1,52 @@
+{{extend './layout.art'}}
+
+{{block 'stylesheet'}}
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/article.css">
+{{/block}}
+
+{{block 'content'}}
+{{include './nav.art'}}
+<div class="article-container">
+  <div class="article-banner flex-container">
+    <div>
+      <h4>文章</h4>
+    </div>
+    <div class="article-submit-btn flex-container"><a href="/article/edit">发布</a></div>
+  </div>
+  {{each articles.records}}
+  <div class="article-box flex-container">
+    <div class="article-cover-page"><img src="{{$value.cover}}" onerror="this.src='/uploads/dog.jpg'"></div>
+    <div class="article-abstract flex-container">
+      <div class="article-detail flex-container" id="article-detail-top">
+        <span>标题:{{$value.title}} </span>
+        <span>作者:{{$value.author_name}} </span>
+        <span>发布时间:{{dateFormat($value.publishDate,'yyyy-mm-dd')}} </span>
+      </div>
+      <div class="article-content">{{$value.abstract}}</div>
+      <div class="article-detail flex-container" id="article-detail-bot">
+        <div></div>
+        <div style="margin-right: 1rem;"><a href="/article/detail?id={{@$value._id}}">详情</a></div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  <nav aria-label="Page navigation example" class="article-pagination">
+    <ul class="pagination justify-content-center">
+      {{if articles.page > 1}}
+      <li class="page-item">
+        <a class="page-link" href="/article?page={{articles.page-1}}">上一页</a>
+      </li>
+      {{/if}}
+      {{each articles.display}}
+      <li class="page-item"><a class="page-link" href="/article?page={{$value}}">{{$value}}</a></li>
+      {{/each}}
+      {{if articles.page < articles.pages}} <li class="page-item">
+        <a class="page-link" href="/article?page={{articles.page - 0 + 1}}">下一页</a>
+        </li>
+        {{/if}}
+    </ul>
+  </nav>
+  <div class="article-void-footer"></div>
+</div>
+{{/block}}

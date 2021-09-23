@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html body{
+    height: 100%;
+}
+
+.flex-container{
+    display: flex;
+}
+.myaccount-box{
+    margin:  4rem auto;
+    width: 60%;
+    height: 60%;
+    flex-direction: column;
+    border: 2px black solid
+}
+/* .myaccount-box div{
+    border: 1px black solid
+} */
+.myaccount-profile{
+    flex: 1;
+    
+}
+.myaccount-profile-item{
+    height: 100%;
+    flex:1;
+    align-items: center;
+}
+.myaccount-profile-item img{
+    height: 100%;
+    width: 100%;
+    margin-left: 2rem;
+}
+
+#myaccount-username{
+    
+}
+#myaccount-likes{
+    
+}
+.myaccount-portfolio{
+    flex: 4;
+    
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+}
+.myaccount-portfolio a{
+    /* text-decoration: none; */
+    color: black;
+}
+.myaccount-portfolio-item{
+    flex:1;
+}
+#myaccount-video{
+   border-left: 2px black solid;
+   border-right: 2px black solid;
+}
+#myaccount-icon img{
+    height: 50px;
+    width: 50px;
+}
+.myaccount-appointment{
+    flex: 1;
+   
+    align-items: center;
+}
+.myaccount-portfolio-item ul{
+    width:100%
+}
+.myaccount-portfolio-item li{
+    width: 100%;
+}
+.myaccount-portfolio-item a{
+    width:100%
+}
+.myaccount-image{
+    height: 70%;
+    width: 70%;
+    margin: auto;
+}
+.myaccount-image img{
+    height: 100%;
+    width: 100%;
+}
+.myaccount-image video{
+    height: 100%;
+    width: 100%;
+}

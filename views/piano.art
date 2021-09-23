@@ -1,0 +1,43 @@
+{{extend './layout.art'}}
+
+{{block 'stylesheet'}}
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/piano.css"> 
+{{/block}}
+
+{{block 'content'}}
+{{include './nav.art'}}
+
+<div class="piano-box">
+    <div class="piano-content">
+        <h4>关于子昊</h4>
+        <p>
+            广东子昊钢琴制造有限公司，溯源于美国19世纪的皇冠钢琴，始创于2000年，是一家集高端钢琴制造、欧美高端钢琴OEM、智能乐器、钢琴艺术教育于一体的综合乐器文化企业，生产制造美国皇冠钢琴、英国伯爵钢琴、德国博士钢琴、英国威廉世家钢琴，和德国乔治戴维斯钢琴，并生产制造自主品牌子昊钢琴。
+        </p>
+        <p>
+            时至今日，子昊已成为全球钢琴生产商的翘楚。今天的子昊，拥有全球领先的钢琴制造产业基地，全球重量级钢琴制造产业园。今天的子昊，拥有业内最先进的全自动化进口生产线十余条，采用欧洲顶级钢琴的装配工艺和加工标准，各项性能指标已达到欧洲中高档钢琴技术质量水平。今天的子昊，作为钢琴行业的领导品牌，连续16年保持平均2位数的稳健增长速度，钢琴年产能3万台。今天的子昊，通过集合国内外优秀人才，从研发、生产、整理、调音等各个环节提升钢琴品质，子昊钢琴充分吸收了欧洲钢琴的先进设计理念，结合美、日等国的现代工业生产模式和加工工艺，在产品设计、制造工艺、材料应用等方面有着领先同业的显著优势，从整体上提升中国钢琴的技术开发水平，引领行业未来5-10年技术方向。今天的子昊，走进了全球亿万家庭的品质生活，有着庞大的市场基础和良好的消费口碑。今天的子昊，拥有专业技术人员200多人，外聘专家顾问、技术特派员、中高级工程师数十名，一个专业化、知识化、年轻化的优才团队，正在推动200年历史的子昊，加速实现更大的发展目标。
+        </p>
+        <p>音悦Studio为子昊钢琴的授权经销商，欢迎致电咨询</p>
+    </div>
+    <h4>部分产品展示</h4>
+    <div class="piano-item">
+        <div class="piano-item-img"><img src="/images/zihao1.jpg" alt=""></div>
+        <div class="piano-item-img"><img src="/images/zihao2.jpg" alt=""></div>
+    </div>
+    <div class="piano-item">
+        <div class="piano-item-img"><img src="/images/zihao3.jpg" alt=""></div>
+        <div class="piano-item-img"><img src="/images/zihao4.jpg" alt=""></div>
+    </div>
+    <div class="piano-item">
+        <div class="piano-item-img"><img src="/images/zihao5.jpg" alt=""></div>
+        <div class="piano-item-img"><img src="/images/zihao6.jpg" alt=""></div>
+    </div>
+    <div class="piano-item">
+        <div class="piano-item-img"><img src="/images/zihao7.jpg" alt=""></div>
+        <div class="piano-item-img"><img src="/images/zihao8.jpg" alt=""></div>
+    </div>
+    <h4>友情链接</h4>
+    <a href="https://mp.weixin.qq.com/mp/homepage?__biz=MzIyNTUwNDkzMQ==&hid=1&sn=476b965bc31b916a72a32f8259409b2b&scene=1&devicetype=android-26&version=28000637&lang=zh_CN&nettype=ctnet&ascene=1&session_us=gh_548cdb3f9f1f&wx_header=1&from=singlemessage">子昊钢琴产品目录</a>
+    
+</div>
+{{/block}}

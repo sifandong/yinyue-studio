@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/register&login.css">
+    <title>音悦Studio</title>
+</head>
+
+<body>
+    <div class="flex-container login-container">
+        <div class="flex-container login-box">
+            <div class="login-box-item flex-container" id="login-title"><h2>用户登录</h2></div>
+            <div class="login-box-item flex-container" id="login-form">
+                <form class="flex-container" action="/login" method="POST" id="loginForm">
+                    <div class="login-form-item flex-container" id="error-box">
+                        {{block 'error'}}<p>{{msg}}</p>{{/block}}
+                    </div>
+                    <div class="login-form-item flex-container"><input name="email" type="text" placeholder="请输入邮箱"></div>
+                    <div class="login-form-item flex-container"><input name="password" type="password" placeholder="请输入密码"></div>
+                    <!-- <div class="login-form-item flex-container"></div> -->
+                    <div class="login-form-item flex-container" id="login-btn"><button type="submit">登录</button></div>
+                </form>
+            </div>
+            <div class="login-box-item flex-container" id="login-to-register">
+                <div><a href="">忘记密码</a></div>
+                <div><a href="/register">注册</a></div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/common.js"></script>
+  <script type="text/javascript">
+  
+    $('#loginForm').on('submit', function () {
+      var result = serializeToJson($(this))
+      
+      if(result.email.trim().length == 0){
+        alert('邮箱不能为空')
+        
+        return false
+      }
+      if(result.password.trim().length == 0){
+        alert('密码不能为空')
+        
+        return false;
+      }
+     
+    })
+  </script>
+</body>
+
+</html>

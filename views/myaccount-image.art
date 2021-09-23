@@ -1,0 +1,13 @@
+{{extend './layout.art'}}
+
+{{block 'stylesheet'}}
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/myaccount.css"> 
+{{/block}}
+
+{{block 'content'}}
+{{include './nav.art'}}
+<div class="myaccount-image">
+    <img src="{{article.cover}}" alt="">
+</div>
+{{/block}}
