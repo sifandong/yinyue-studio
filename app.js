@@ -72,6 +72,7 @@ app.use('/piano',piano)
 app.use('/appointment',appointment)
 app.use('/myaccount',myaccount)
 
-
-app.listen(80)
-console.log('服务器已启动')
+const port = process.env.port || 3000
+app.listen(port,()=>{
+    console.log('wuhoooo')
+})
