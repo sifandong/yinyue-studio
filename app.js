@@ -10,7 +10,7 @@ const app = express()
 
 
 //连接数据库
-mongoose.connect('mongodb://localhost/qinhang',{ useUnifiedTopology: true,useNewUrlParser: true, useCreateIndex: true })
+mongoose.connect('mongodb://127.0.0.1/qinhang',{ useUnifiedTopology: true,useNewUrlParser: true, useCreateIndex: true })
     .then(()=>{console.log('database connection succeeded')})
     .catch(()=>{console.log('database connection failed')})
 
