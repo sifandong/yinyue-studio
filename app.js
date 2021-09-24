@@ -24,9 +24,9 @@ app.use(session({
     secret:'key_secret',
     resave: false,
     saveUninitialized: false,
-    cookie:{
-        maxAge: 30*24*60*60*1000
-    }
+    // cookie:{
+    //     maxAge: 30*24*60*60*1000
+    // }
 }))
 
 //模板设置

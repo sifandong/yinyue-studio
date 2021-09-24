@@ -29,7 +29,7 @@
       </div>
       <div class="login-box-item flex-container" id="login-to-register">
         <!-- <div><a href="">忘记密码</a></div> -->
-        <div><a href="/signup">登录</a></div>
+        <div><a href="/login">登录</a></div>
       </div>
     </div>
   </div>
