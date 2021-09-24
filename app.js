@@ -51,10 +51,10 @@ app.use((req,res,next)=>{
     next();
 })
 
-app.use('/',(req,res)=>{
-    res.render('home')
+app.get('/',(req,res,next)=>{
+    console.log('yes');
+    next();
 })
-
 
 //home路由
 const home = require('./routes/home')
