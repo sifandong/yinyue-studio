@@ -51,8 +51,8 @@ app.use((req,res,next)=>{
     next();
 })
 
-app.get('/',(req,res)=>{
-    res.send('搞完去打大乱斗')
+app.use('/',(req,res)=>{
+    res.render('home')
 })
 
 
