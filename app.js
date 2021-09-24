@@ -51,7 +51,9 @@ app.use((req,res,next)=>{
     next();
 })
 
-
+app.get('/',(req,res)=>{
+    console.log(yes);
+})
 
 
 //home路由
