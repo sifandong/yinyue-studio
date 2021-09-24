@@ -52,7 +52,7 @@ app.use((req,res,next)=>{
 })
 
 app.get('/',(req,res)=>{
-    console.log(yes);
+    console.log('yes');
 })
 
 
