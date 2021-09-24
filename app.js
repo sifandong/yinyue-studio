@@ -41,6 +41,11 @@ template.defaults.imports.dateFormat = dateFormat
 //静态资源
 app.use(express.static(path.join(__dirname,'public')))
 
+
+console.log(req.session.user);
+console.log(res.locals.user);
+
+
 app.get('/',(req,res)=>{
     console.log('yes');
     res.redirect('/home')
@@ -53,8 +58,7 @@ app.use((req,res,next)=>{
     }
     next();
 })
-console.log(req.session.user);
-console.log(res.locals.user);
+
 
 
 
