@@ -51,9 +51,9 @@ app.use((req,res,next)=>{
     next();
 })
 
-app.get('/',(req,res,next)=>{
+app.use('/',(req,res)=>{
     console.log('yes');
-    next();
+    res.redirect('/home')
 })
 
 //home路由
