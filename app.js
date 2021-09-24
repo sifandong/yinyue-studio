@@ -10,7 +10,8 @@ const app = express()
 
 
 //连接数据库
-mongoose.connect('mongodb+srv://yinyue-studio-admin:Gtech19891020*@yinyue-studio.3qitu.mongodb.net/yinyue-studio?retryWrites=true&w=majority',{ useUnifiedTopology: true,useNewUrlParser: true, useCreateIndex: true })
+const uri = "mongodb+srv://yinyue-studio-admin:Gtech19891020*@yinyue-studio.3qitu.mongodb.net/yinyue-studio?retryWrites=true&w=majority"
+mongoose.connect(uri,{ useUnifiedTopology: true,useNewUrlParser: true, useCreateIndex: true })
     .then(()=>{console.log('database connection succeeded')})
     .catch(()=>{console.log('database connection failed')})
 
