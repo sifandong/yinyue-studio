@@ -41,7 +41,10 @@ template.defaults.imports.dateFormat = dateFormat
 //静态资源
 app.use(express.static(path.join(__dirname,'public')))
 
-
+app.get('/',(req,res)=>{
+    console.log('yes');
+    res.redirect('/home')
+})
 
 //登录拦截
 app.use((req,res,next)=>{
@@ -51,10 +54,7 @@ app.use((req,res,next)=>{
     next();
 })
 
-app.get('/',(req,res)=>{
-    console.log('yes');
-    res.redirect('/home')
-})
+
 
 //home路由
 const home = require('./routes/home')

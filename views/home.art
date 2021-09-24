@@ -39,14 +39,14 @@
             </li>
 
             <!-- 这个地方需要使用模板引擎进行判定 -->
-            {{if !req.session.user}}
+            {{if user}}
             <li class="nav-item">
               <a class="nav-link" href="/login">登录</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/register">注册</a>
             </li>
-            {{else if req.session.user}}
+            {{else if user}}
             <li class="nav-item">
               <a class="nav-link" href="/myaccount?user_id={{user._id}}">你好，{{user.username}}</a>
             </li>
