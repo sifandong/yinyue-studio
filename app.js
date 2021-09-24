@@ -42,9 +42,6 @@ template.defaults.imports.dateFormat = dateFormat
 app.use(express.static(path.join(__dirname,'public')))
 
 
-console.log(req.session.user);
-console.log(res.locals.user);
-
 
 app.get('/',(req,res)=>{
     console.log('yes');
