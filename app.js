@@ -53,6 +53,8 @@ app.use((req,res,next)=>{
     }
     next();
 })
+console.log(req.session.user);
+console.log(res.locals.user);
 
 
 
