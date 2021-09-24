@@ -11,18 +11,16 @@ myaccount.get('/', async (req,res)=>{
     let collection = await Article.find().populate('author')
     collection = JSON.stringify(collection)
     collection = JSON.parse(collection)
+    res.render('myaccount',{
+        user: user,
+        collection: collection
+    })
     
-    if(req.app.locals.user){
         
 
 
-        res.render('myaccount',{
-            user: user,
-            collection: collection
-        })
-    }else{
-        res.render('log-in')
-    }
+        
+    
 })
 
 myaccount.get('/article',async(req,res)=>{ 
