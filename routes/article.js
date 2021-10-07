@@ -62,7 +62,7 @@ article.get('/detail', async(req,res)=>{
 // })
 
 article.get('/edit',(req,res)=>{
-    if(req.app.locals.user){
+    if(res.locals.user){
         res.render('article-edit')
     }else{
         res.render('log-in')
